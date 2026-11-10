@@ -57,7 +57,7 @@
       warnings:['演示数据，未连接本地文件系统'], scannedFiles:10, skippedLinks:0, aborted:false
     });
     switch (cmd) {
-      case 'app_info': return P({ product:'Easy Compare', version:'0.1.0 (演示)', dataDir:'-', platform:'windows' });
+      case 'app_info': return P({ product:'Easy Compare', version:'0.0.1 (演示)', dataDir:'-', platform:'windows' });
       case 'list_drives': return P(DEMO_DRIVES);
       case 'browse_dirs': {
         const names = a.path && a.path.indexOf('E:') === 0

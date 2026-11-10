@@ -66,8 +66,8 @@ npm run build    # 生成安装包到 src-tauri/target/release/bundle/
 
 | 产物 | 路径 |
 |---|---|
-| NSIS 安装版（推荐） | `src-tauri/target/release/bundle/nsis/Easy Compare_0.1.0_x64-setup.exe` |
-| MSI 安装版 | `src-tauri/target/release/bundle/msi/Easy Compare_0.1.0_x64_en-US.msi` |
+| NSIS 安装版（推荐） | `src-tauri/target/release/bundle/nsis/Easy Compare_0.0.1_x64-setup.exe` |
+| MSI 安装版 | `src-tauri/target/release/bundle/msi/Easy Compare_0.0.1_x64_en-US.msi` |
 | 免安装主程序 | `src-tauri/target/release/easy-compare.exe` |
 
 ### 只看界面

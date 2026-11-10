@@ -1,7 +1,7 @@
 {
   "name": "easy-compare",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Easy Compare — 目录差异比对与增量备份桌面客户端",
   "type": "module",
   "scripts": {

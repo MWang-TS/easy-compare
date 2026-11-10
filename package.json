@@ -1,0 +1,17 @@
+{
+  "name": "easy-compare",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Easy Compare — 目录差异比对与增量备份桌面客户端",
+  "type": "module",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "check:fe": "node --check src/app.js",
+    "verify": "node scripts/verify_ui.cjs && node scripts/verify_tree.cjs && node scripts/verify_select.cjs && node scripts/verify_paths.cjs && node scripts/verify_theme.cjs && node scripts/verify_perf.cjs"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.11.5"
+  }
+}

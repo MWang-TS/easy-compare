@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Easy Compare",
+  "version": "0.1.0",
+  "identifier": "com.easycompare.desktop",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Easy Compare — 目录比对与增量备份",
+        "width": 1360,
+        "height": 880,
+        "minWidth": 1024,
+        "minHeight": 640,
+        "resizable": true,
+        "center": true,
+        "decorations": false,
+        "shadow": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self' ipc: http://ipc.localhost; connect-src 'self' ipc: http://ipc.localhost; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' asset: http://asset.localhost data:"
+    },
+    "withGlobalTauri": true
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis", "msi"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "shortDescription": "目录差异比对与增量备份",
+    "longDescription": "Easy Compare 用于比对任意两个目录的文件差异，并以单向增量方式安全备份到目标目录（例如移动硬盘）。默认不删除目标端文件，覆盖前保留旧版本。",
+    "category": "Utility",
+    "copyright": "Copyright © 2026"
+  }
+}

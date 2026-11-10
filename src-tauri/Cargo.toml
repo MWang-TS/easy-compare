@@ -1,0 +1,27 @@
+[package]
+name = "easy-compare"
+version = "0.1.0"
+description = "Easy Compare - directory diff and incremental backup desktop client"
+authors = ["Gawain"]
+edition = "2021"
+rust-version = "1.89"
+
+[lib]
+name = "easy_compare_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+# 固定到与本机 Rust 1.89 兼容且已缓存的版本。
+# tauri 2.12.5 的 MSRV 为 1.90 / edition 2024，在 Rust 1.89 上无法编译。
+[build-dependencies]
+tauri-build = { version = "=2.6.3", features = [] }
+
+[dependencies]
+tauri = { version = "=2.11.5", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+
+[profile.release]
+# 本工具为 I/O 密集型，完整 LTO 收益极小却会大幅拉长首次打包时间，故不启用。
+strip = true
+panic = "abort"
